@@ -7,7 +7,7 @@ void displayCharacters(Characters *pCharacters){
 	displayAttributs(pCharacters);
 	printf("\nCompétences du Personnage :");fflush(stdout);
 	displayCompetences(pCharacters);
-	printf("\nDon du Personnage :\n");fflush(stdout);
+	printf("\n\nDon du Personnage :\n");fflush(stdout);
 	displayDon(pCharacters);
 }
 
@@ -23,38 +23,41 @@ void displayAttributs(Characters *pCharacters){
 
 void displayCompetences(Characters *pCharacters){
 	printf("\tCompétences\t+\tBonus d'Attribut\t=\tTotal\n\n"); fflush(stdout);
-	printf("\tInformatique\t:\t%d\t+\t%d\t=\t%d\n", pCharacters->pCompetences->tabCompetence[0], pCharacters->pAttributs->Bonustab[3],\
+	printf("\tInformatique\t:\t\t%d\t+\t\t%d\t\t=\t%d\n", pCharacters->pCompetences->tabCompetence[0], pCharacters->pAttributs->Bonustab[3],\
 pCharacters->pCompetences->tabCompetence[0] + pCharacters->pAttributs->Bonustab[3]);fflush(stdout);
-	printf("\tDémolition\t:\t%d\t+\t%d\t=\t%d\n", pCharacters->pCompetences->tabCompetence[1], pCharacters->pAttributs->Bonustab[3],\
+	printf("\tDémolition\t:\t\t%d\t+\t\t%d\t\t=\t%d\n", pCharacters->pCompetences->tabCompetence[1], pCharacters->pAttributs->Bonustab[3],\
 pCharacters->pCompetences->tabCompetence[1] + pCharacters->pAttributs->Bonustab[3] );fflush(stdout);
-	printf("\tDiscrétion\t:\t%d\t+\t%d\t=\t%d\n", pCharacters->pCompetences->tabCompetence[2], pCharacters->pAttributs->Bonustab[1],\
+	printf("\tDiscrétion\t:\t\t%d\t+\t\t%d\t\t=\t%d\n", pCharacters->pCompetences->tabCompetence[2], pCharacters->pAttributs->Bonustab[1],\
 pCharacters->pCompetences->tabCompetence[2] + pCharacters->pAttributs->Bonustab[1]);fflush(stdout);
-	printf("\tVigilance\t:\t%d\t+\t%d\t=\t%d\n", pCharacters->pCompetences->tabCompetence[3], pCharacters->pAttributs->Bonustab[4],\
+	printf("\tVigilance\t:\t\t%d\t+\t\t%d\t\t=\t%d\n", pCharacters->pCompetences->tabCompetence[3], pCharacters->pAttributs->Bonustab[4],\
 pCharacters->pCompetences->tabCompetence[3] + pCharacters->pAttributs->Bonustab[4] );fflush(stdout);
-	printf("\tPersuasion\t:\t%d\t+\t%d\t=\t%d\n", pCharacters->pCompetences->tabCompetence[4], pCharacters->pAttributs->Bonustab[5],\
+	printf("\tPersuasion\t:\t\t%d\t+\t\t%d\t\t=\t%d\n", pCharacters->pCompetences->tabCompetence[4], pCharacters->pAttributs->Bonustab[5],\
 pCharacters->pCompetences->tabCompetence[4] + pCharacters->pAttributs->Bonustab[5] );fflush(stdout);
-	printf("\tRéparation\t:\t%d\t+\t%d\t=\t%d\n", pCharacters->pCompetences->tabCompetence[5], pCharacters->pAttributs->Bonustab[3],\
+	printf("\tRéparation\t:\t\t%d\t+\t\t%d\t\t=\t%d\n", pCharacters->pCompetences->tabCompetence[5], pCharacters->pAttributs->Bonustab[3],\
 pCharacters->pCompetences->tabCompetence[5] + pCharacters->pAttributs->Bonustab[3] );fflush(stdout);
-	printf("\tSécurité\t:\t%d\t+\t%d\t=\t%d\n", pCharacters->pCompetences->tabCompetence[6], pCharacters->pAttributs->Bonustab[4],\
+	printf("\tSécurité\t:\t\t%d\t+\t\t%d\t\t=\t%d\n", pCharacters->pCompetences->tabCompetence[6], pCharacters->pAttributs->Bonustab[4],\
 pCharacters->pCompetences->tabCompetence[6] + pCharacters->pAttributs->Bonustab[4]);fflush(stdout);
-	printf("\tPremierSecours\t:\t%d\t+\t%d\t=\t%d\n", pCharacters->pCompetences->tabCompetence[7], pCharacters->pAttributs->Bonustab[4],\
+	printf("\tPremierSecours\t:\t\t%d\t+\t\t%d\t\t=\t%d\n", pCharacters->pCompetences->tabCompetence[7], pCharacters->pAttributs->Bonustab[4],\
 pCharacters->pCompetences->tabCompetence[7] + pCharacters->pAttributs->Bonustab[4]);fflush(stdout);
 }
 
 void displayDon(Characters *pCharacters){
-	printf("\tDon en cours de Développement\n\n\tNombre de Don Potentiel :\t%d\n\n", pCharacters->pDon->donPresence);fflush(stdout);
+	printf("\n\n\tNombre de Don Potentiel :\t%d\n\n", pCharacters->pDon->donPresence);fflush(stdout);
 	
 	if(pCharacters->pDon->donPresence > 0){
-		printf("\t%s\n\n", pCharacters->pDon->plstPerks->namePerks);fflush(stdout);
-		printf("Tab de modif d'Attributs : \n\n");fflush(stdout);
-		for (int i = 0; i < 7; ++i)
-			printf("\t\t ATT : %d\t\t Comp : %d\n", pCharacters->pDon->plstPerks->tabAttPerks[i], pCharacters->pDon->plstPerks->tabCompPerks[i]);
-		printf("\n");
-		if(pCharacters->pDon->donPresence == 2){
-			printf("\t%s\n\n", pCharacters->pDon->plstPerks->next->namePerks);fflush(stdout);
-			printf("Tab de modif d'Attributs : \n\n");fflush(stdout);
+		if(pCharacters->pDon->donPresence == 1){
+			printf("\t%s\n\n", pCharacters->pDon->plstPerks->namePerks);fflush(stdout);
+			printf("\tTab de modif d'Attributs : \n\n");fflush(stdout);
 			for (int i = 0; i < 7; ++i)
-				printf("\t\t ATT : %d\t\t Comp : %d\n", pCharacters->pDon->plstPerks->next->tabAttPerks[i], pCharacters->pDon->plstPerks->next->tabCompPerks[i]);
+				printf("\t\t ATT : %d\t\t Comp : %d\n", pCharacters->pDon->plstPerks->tabAttPerks[i], pCharacters->pDon->plstPerks->tabCompPerks[i]);
+			printf("\n");
+		}
+		else{
+			printf("\t%s\t\t\t\t\t\t%s\n\n", pCharacters->pDon->plstPerks->namePerks, pCharacters->pDon->plstPerks->next->namePerks);fflush(stdout);
+			printf("\tTab de modif d'Attributs :\t\t\t\t\tTab de modif d'Attributs :\n\n");fflush(stdout);
+			for (int i = 0; i < 7; ++i)
+				printf("\t\t ATT : %d\t\t Comp : %d\t\t\t\t ATT : %d\t\t Comp : %d\n", pCharacters->pDon->plstPerks->tabAttPerks[i],\
+			 	pCharacters->pDon->plstPerks->tabCompPerks[i], pCharacters->pDon->plstPerks->next->tabAttPerks[i], pCharacters->pDon->plstPerks->next->tabCompPerks[i]);
 			printf("\n");
 		}
 	}
@@ -75,7 +78,7 @@ void displayCharactersFiles(Characters *pCharacters){
 	displayAttributsFiles(files, pCharacters);
 	fprintf(files, "\nCompétences du Personnage :");fflush(files);
 	displayCompetencesFiles(files, pCharacters);
-	fprintf(files, "\nDon du Personnage :\n");fflush(files);
+	fprintf(files, "\n\nDon du Personnage :\n");fflush(files);
 	displayDonFiles(files, pCharacters);
 	fclose(files);
 }
@@ -111,20 +114,26 @@ pCharacters->pCompetences->tabCompetence[7] + pCharacters->pAttributs->Bonustab[
 }
 
 void displayDonFiles(FILE *files, Characters *pCharacters){
-	fprintf(files, "\tDon en cours de Développement\n\n\tNombre de Don Potentiel :\t%d\n\n", pCharacters->pDon->donPresence);fflush(files);
+	fprintf(files, "\n\tNombre de Don Potentiel :\t%d\n\n", pCharacters->pDon->donPresence);fflush(stdout);
 	
 	if(pCharacters->pDon->donPresence > 0){
-		fprintf(files, "\t%s\n\n", pCharacters->pDon->plstPerks->namePerks);fflush(files);
-		fprintf(files, "Tab de modif d'Attributs : \n\n");fflush(files);
-		for (int i = 0; i < 7; ++i)
-			fprintf(files, "\t\t ATT : %d\t\t Comp : %d\n", pCharacters->pDon->plstPerks->tabAttPerks[i], pCharacters->pDon->plstPerks->tabCompPerks[i]);
-		fprintf(files, "\n");
-		if(pCharacters->pDon->donPresence == 2){
-			fprintf(files, "\t%s\n\n", pCharacters->pDon->plstPerks->next->namePerks);fflush(files);
-			fprintf(files, "Tab de modif d'Attributs : \n\n");fflush(files);
+		if(pCharacters->pDon->donPresence == 1){
+			fprintf(files, "\t%s\n\n", pCharacters->pDon->plstPerks->namePerks);fflush(stdout);
+			fprintf(files, "\tTab de modif d'Attributs : \n\n");fflush(stdout);
 			for (int i = 0; i < 7; ++i)
-				fprintf(files, "\t\t ATT : %d\t\t Comp : %d\n", pCharacters->pDon->plstPerks->next->tabAttPerks[i], pCharacters->pDon->plstPerks->next->tabCompPerks[i]);
+				fprintf(files, "\t\t ATT : %d\t\t Comp : %d\n", pCharacters->pDon->plstPerks->tabAttPerks[i], pCharacters->pDon->plstPerks->tabCompPerks[i]);
+			fprintf(files, "\n");
+		}
+		else{
+			fprintf(files, "\t%s\t\t\t\t\t\t%s\n\n", pCharacters->pDon->plstPerks->namePerks, pCharacters->pDon->plstPerks->next->namePerks);fflush(stdout);
+			fprintf(files, "\tTab de modif d'Attributs :\t\t\t\t\t\tTab de modif d'Attributs :\n\n");fflush(stdout);
+			for (int i = 0; i < 7; ++i)
+				fprintf(files, "\t\t ATT : %d\t\t Comp : %d\t\t\t\t ATT : %d\t\t Comp : %d\n", pCharacters->pDon->plstPerks->tabAttPerks[i],\
+			 	pCharacters->pDon->plstPerks->tabCompPerks[i], pCharacters->pDon->plstPerks->next->tabAttPerks[i], pCharacters->pDon->plstPerks->next->tabCompPerks[i]);
 			fprintf(files, "\n");
 		}
 	}
+	else
+		fprintf(files, "\n");
 }
+

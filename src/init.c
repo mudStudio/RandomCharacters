@@ -142,17 +142,15 @@ void updateCompetences(Competences *pCompetences){
 	}
 }
 
-
 void CreatPerks(lstPerks *firstPerks){ // App modif 
 
-	firstPerks->namePerks = "toto";
+	firstPerks->namePerks = "NomPerks :\t";
 	for (int i = 0; i < 7; ++i)
 		firstPerks->tabAttPerks[i] = 0;
 	for (int i = 0; i < 8; ++i)
 		firstPerks->tabCompPerks[i] = 0;
 	firstPerks->next = &(*firstPerks);
 }
-
 
 void InitDon(Don *pDon){
 	int test = Random(0,100);
@@ -163,7 +161,7 @@ void InitDon(Don *pDon){
 			exit(EXIT_FAILURE);
 		}
 	}
-	if(test <= 5){
+	if(test <= 55){
 		pDon->donPresence = 2;
 		CreatPerks(pDon->plstPerks);
 		if(pDon->plstPerks->next == NULL){
@@ -175,7 +173,7 @@ void InitDon(Don *pDon){
 		}
 		CreatPerks(pDon->plstPerks->next);
 	}
-	else if(test > 5 && test < 15){
+	else if(test > 65 && test < 150){
 		pDon->donPresence = 1;
 		CreatPerks(pDon->plstPerks);
 	}
