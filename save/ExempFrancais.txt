@@ -1,32 +1,46 @@
 Affichage du Personnage :
 
-		Nom :	Aaymr		Sexe :	Femelle
+		Nom :	Marelios Talpals		Sex :	Male
 
 Attributs du Personnage :
 
-	Force = 15				BonusForce = 2
+	Force = 11				BonusForce = 0
 	Dexterite = 12			BonusDexterite = 1
-	Constitution = 11		BonusConstitution = 0
-	Intelligence = 12		BonusInteligence = 1
-	Sagesse = 13			BonusSagesse = 1
-	Charisme = 14			BonusCharisme = 2
+	Constitution = 12		BonusConstitution = 1
+	Inteligence = 17		BonusInteligence = 3
+	Sagesse = 12			BonusSagesse = 1
+	Charisme = 10			BonusCharisme = 1
 
-	Chance = 10				BonusChance = 0
+	Chance = 10			BonusChance = 0
 
 
 Compétences du Personnage :
 
-					Compétences		+		Bonus d'Attribut	=		  Total
+					Compétences		+		Bonus d'Attribut	=		Total
 
-Informatique	:		3			+			1				=			4
-Démolition		:		1			+			1				=			2
-Discrétion		:		0			+			1				=			1
-Vigilance		:		3			+			1				=			4
-Persuasion		:		4			+			2				=			6
-Réparation		:		0			+			1				=			1
+Informatique	:		4			+			3				=			7
+Démolition		:		1			+			3				=			4
+Discrétion		:		1			+			1				=			2
+Vigilance		:		1			+			1				=			2
+Persuasion		:		4			+			1				=			5
+Réparation		:		0			+			3				=			3
 Sécurité		:		0			+			1				=			1
 PremierSecours	:		0			+			1				=			1
 
+
 Don du Personnage :
 
-	Nombre de Don Potentiel :	0
+	Nombre de Don Potentiel :	2
+
+	NomPerks :										NomPerks :	
+
+	Tab de modif d'Attributs :						Tab de modif d'Attributs :
+
+		ATT : 0		 Comp : 0					 	ATT : 0			 Comp : 0
+		ATT : 0		 Comp : 0					 	ATT : 0			 Comp : 0
+		ATT : 0		 Comp : 0					 	ATT : 0			 Comp : 0
+		ATT : 0		 Comp : 0					 	ATT : 0			 Comp : 0
+		ATT : 0		 Comp : 0					 	ATT : 0			 Comp : 0
+		ATT : 0		 Comp : 0					 	ATT : 0			 Comp : 0
+		ATT : 0		 Comp : 0					 	ATT : 0			 Comp : 0
+

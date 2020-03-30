@@ -4,14 +4,14 @@
 
 	//Force
 		//Bonus
-			// Atletique : Force + 1
+			// Atletique 	: Force + 1
 
 			// Musculeux.se : Force + 2
 		
 		//Malus
-			// Faiblesse : Force - 1
+			// Faiblesse	: Force - 1
 
-			// Force - 2
+			// Décharné.e 	: Force - 2
 	//Dexterite
 		//Bonus
 			// Dexterite + 1
@@ -19,9 +19,9 @@
 			// Dexterite + 2
 		
 		//Malus
-			// Dexterite - 1
+			// Doigts Boudinés	: Dexterite - 1
 
-			// Dexterite - 2
+			// Tendon Coupé 	: Dexterite - 2
 
 	//Constitution
 		//Bonus

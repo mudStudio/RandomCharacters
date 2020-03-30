@@ -27,7 +27,6 @@ int main(int argc, char const *argv[])
 		if(cmd == 3)
 			launched = 0;
 		else if(cmd == 1){
-		//	freeStruct(pCharacters);
 			system("clear");
 			Init(pCharacters);
 			displayCharacters(pCharacters);
@@ -51,5 +50,6 @@ void printfflush(char *s){
 
 /*
 	faire :
+		- doubler les tab de RandomName 
 		- pensé  Don ?
 */
