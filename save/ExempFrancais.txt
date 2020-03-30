@@ -1,0 +1,32 @@
+Affichage du Personnage :
+
+		Nom :	Aaymr		Sexe :	Femelle
+
+Attributs du Personnage :
+
+	Force = 15				BonusForce = 2
+	Dexterite = 12			BonusDexterite = 1
+	Constitution = 11		BonusConstitution = 0
+	Intelligence = 12		BonusInteligence = 1
+	Sagesse = 13			BonusSagesse = 1
+	Charisme = 14			BonusCharisme = 2
+
+	Chance = 10				BonusChance = 0
+
+
+Compétences du Personnage :
+
+					Compétences		+		Bonus d'Attribut	=		  Total
+
+Informatique	:		3			+			1				=			4
+Démolition		:		1			+			1				=			2
+Discrétion		:		0			+			1				=			1
+Vigilance		:		3			+			1				=			4
+Persuasion		:		4			+			2				=			6
+Réparation		:		0			+			1				=			1
+Sécurité		:		0			+			1				=			1
+PremierSecours	:		0			+			1				=			1
+
+Don du Personnage :
+
+	Nombre de Don Potentiel :	0

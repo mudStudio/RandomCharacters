@@ -1,0 +1,46 @@
+Character 's display:
+
+		Name :	Kir Fihrin		Sex :	Unidentified
+
+Character 's Attributs :
+
+	Strength = 13				BonusStrength = 1
+	Dexterity = 15				BonusDexterity = 2
+	Constitution = 12			BonusConstitution = 1
+	Intelligence = 14			BonusInteligence = 2
+	wisdom = 13					Bonuswisdom = 1
+	Charisma = 10				BonusCharisma = 1
+
+	Chance = 10					BonusChance = 0
+
+
+Character 's Compétences :
+
+					Compétences		+		Bonus Attributs		=	   	  Total
+
+Computing		:		0			+			2				=			2
+Demolition		:		0			+			2				=			2
+Discretion		:		0			+			2				=			2
+Vigilance		:		1			+			1				=			2
+Persuasion		:		1			+			1				=			2
+Reparation		:		2			+			2				=			4
+Safety			:		0			+			1				=			1
+First Aid		:		4			+			1				=			5
+
+
+Character's Perks :
+
+	Potential Character's Perks Nomber :	1
+
+	Perks name : "  "
+
+	Modification Tab of Attributs : 
+
+		 Strength 		:	0		 Computing 		: 0
+		 Dexterity 		:	0		 Demolition 	: 0
+		 Constitution 	:	0		 Discretion 	: 0
+		 Intelligence 	:	0		 Persuasion 	: 0
+		 wisdom 		:	0		 Reparation 	: 0
+		 Charisma 		:	0		 Safety 		: 0
+		 Chance 		:	0		 First Aid 		: 0
+
