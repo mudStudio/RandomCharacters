@@ -1,8 +1,8 @@
-Character 's display:
+Character's display:
 
 		Name :	Kir Fihrin		Sex :	Unidentified
 
-Character 's Attributs :
+Character's Attributs :
 
 	Strength = 13				BonusStrength = 1
 	Dexterity = 15				BonusDexterity = 2
@@ -14,7 +14,7 @@ Character 's Attributs :
 	Chance = 10					BonusChance = 0
 
 
-Character 's Compétences :
+Character's Compétences :
 
 					Compétences		+		Bonus Attributs		=	   	  Total
 

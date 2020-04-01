@@ -5,8 +5,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <SDL2/SDL.h>
 
 #include "define.h"
+#include "manip.h"
 
 int my_rand (void);
 int Random (int _iMin, int _iMax);
@@ -16,6 +18,5 @@ int ccomp(char c, char *s);
 char RandomStr(char *s);
 
 char *RandomName(char *name);
-char  *ft_strjoin(char const *s1, char const *s2);
 
 #endif

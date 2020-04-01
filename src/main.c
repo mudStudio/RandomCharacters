@@ -5,51 +5,50 @@
 #include "init.h"
 #include "display.h"
 
-void printfflush(char *);
+#include <stdio.h>
+#include <stdlib.h>
+
 
 int main(int argc, char const *argv[])
 {
-	system("clear");
-	int launched = 1;
-	Characters *pCharacters = calloc(1,sizeof(Characters));
-	if(pCharacters == NULL){
-		fprintf(stderr, "ERROR : pCharacters creation failed.\n");
+    Characters *pCharacters = calloc(1,sizeof(Characters));
+    if(pCharacters == NULL){
+        printfflush("ERROR : pCharacters creation failed \n");
         exit(EXIT_FAILURE);
-	}
-	do{
-		printfflush("MENU :\n\n");
-		printfflush("1)\tNouveau Personnage\n");
-		printfflush("2)\tCopier Personnage dans un fichier\n");
-		printfflush("3)\tQuitter\n");
-		printfflush("Entrée un chiffre\t");
-		int cmd;
-		scanf("%d",&cmd);
-		if(cmd == 3)
-			launched = 0;
-		else if(cmd == 1){
-			system("clear");
-			Init(pCharacters);
-			displayCharacters(pCharacters);
-			printfflush("\n");
-		}
-		else if(cmd == 2){
-			displayCharactersFiles(pCharacters);
-			system("clear");
-			printfflush("copy effectuée !\n\n");
-			freeStruct(pCharacters);
-		}else
-			break;
-	}while(launched);
-	freeStruct(pCharacters);
-	return 0;
-}
+    }
+	
+    int launched = 1;
 
-void printfflush(char *s){
-	printf("%s", s);fflush(stdout);
+    int choix = 0;
+
+// Refaire le menu
+
+    do{
+        printfflush("Menu :\n");
+        printfflush("1) Nouveau Personnage\n");
+        printfflush("2) Copy dans un fichier\n");
+        printfflush("3) Quitter\t");
+        scanf("%d",&choix);
+        if(choix == 1){
+            system("clear");    
+            Init(pCharacters);
+            displayCharacters(pCharacters);
+        }
+        else if(choix == 2){
+            Init(pCharacters);
+            displayCharactersFiles(pCharacters);
+        }
+        else
+            launched = 0;
+    }while(launched == 1);
+	
+	freeStructCharacters(pCharacters);
+	return 0;
 }
 
 /*
 	faire :
 		- doubler les tab de RandomName 
-		- pensé  Don ?
+
+		- pensé  Don ? // affichage avant
 */

@@ -1,6 +1,10 @@
 #include "init.h"
 
 void Init(Characters *pCharacters){
+	InitCharactes(pCharacters);
+}
+
+void InitCharactes(Characters *pCharacters){
 	pCharacters->nameCharacters = RandomName(pCharacters->nameCharacters);
 	
 	if(pCharacters->pAttributs == NULL){
@@ -28,6 +32,7 @@ void Init(Characters *pCharacters){
 	        fprintf(stderr, "ERROR : Don creation failed.\n");
 	        exit(EXIT_FAILURE);
 		}
+		pCharacters->pDon->plstPerks = NULL;
 	}
 	InitDon(pCharacters->pDon);
 
@@ -42,13 +47,11 @@ void Init(Characters *pCharacters){
 	pCharacters->VitaliteMax = 100;
 	pCharacters->VitaliteAct = 100;
 	
-//	pCharacters->ForceMax = 100;
-//	pCharacters->ForceAct = 100;
+	pCharacters->ForceMax = 100;
+	pCharacters->ForceAct = 100;
 }
 
 void InitAttributs(Attributs *pAttributs){
-
-//define Sex
 	int bio =  Random(-1,1);
 	if(bio == -1)
 		pAttributs->Sex = "Male";
@@ -57,12 +60,8 @@ void InitAttributs(Attributs *pAttributs){
 	else
 		pAttributs->Sex = "Unidentified";
 
-// define preference : Homo, Hetero, Bi, Pan, A
-	int pref = Random(0,4);
-	char tab[5][14] = {"Homosexual", "Heterosexual", "Bisexual", "Pansexual", "Asexual"};
-	pAttributs->Sexuality = tab[pref];
-
-//define Attributs 
+	pAttributs->Sexuality = Random(0,5);
+	
 	pAttributs->tabAttributs[0] = 8;
 	pAttributs->tabAttributs[1] = 8;
 	pAttributs->tabAttributs[2] = 8;
@@ -78,7 +77,7 @@ void InitAttributs(Attributs *pAttributs){
 	pAttributs->Bonustab[4] = (pAttributs->tabAttributs[4] - NORMALSTATS)/2;	//BSagesse
 	pAttributs->Bonustab[5] = (pAttributs->tabAttributs[5] - NORMALSTATS)/2;	//BCharisme
 	pAttributs->Bonustab[6] = (pAttributs->tabAttributs[6] - NORMALSTATS)/2;	//BChance
-//add some experience
+
 	updateAttributs(pAttributs);
 }
 
@@ -143,15 +142,14 @@ void updateCompetences(Competences *pCompetences){
 }
 
 void CreatPerks(lstPerks *firstPerks){ // App modif 
-
 	firstPerks->namePerks = "NomPerks :\t";
+	firstPerks->namePerks = ft_strjoin(firstPerks->namePerks, "Non du Perks");
 	for (int i = 0; i < 7; ++i)
 		firstPerks->tabAttPerks[i] = 0;
 	for (int i = 0; i < 8; ++i)
 		firstPerks->tabCompPerks[i] = 0;
 	firstPerks->next = &(*firstPerks);
 }
-
 void InitDon(Don *pDon){
 	int test = Random(0,100);
 	if(pDon->plstPerks == NULL) {
@@ -181,23 +179,21 @@ void InitDon(Don *pDon){
 		pDon->donPresence = 0;
 }
 
+void freeStructCharacters(Characters *pCharacters){
 
-void freeStruct(Characters *pCharacters){
-	
-//Free Attributs
 	if(pCharacters->pAttributs != NULL)
 		free(pCharacters->pAttributs);
-//Free Competences
+
 	if(pCharacters->pCompetences != NULL)
 		free(pCharacters->pCompetences);
-//Free Don
+
 	if(pCharacters->pDon->plstPerks->next != NULL)
 		free(pCharacters->pDon->plstPerks->next);
 	if(pCharacters->pDon->plstPerks != NULL)
 		free(pCharacters->pDon->plstPerks);
 	if(pCharacters->pDon != NULL)
 		free(pCharacters->pDon);
-//Free Characters
+
  	if(pCharacters != NULL)
 		free(pCharacters);
 }

@@ -53,7 +53,7 @@ re: fclean all
 
 # linux rules
 linux:
-	$(CC) $(CFLAGS) src/*.c -o $(NAME)
+	$(CC) $(CFLAGS) src/*.c -lm -o $(NAME)
 	./$(NAME)
 
 linuxClean:
@@ -68,6 +68,5 @@ linuxCText: linuxClean
 linuxRe: linuxFClean linux
 
 # MAC rules
-
 
 .PHONY: err, all, clean, fclean, re

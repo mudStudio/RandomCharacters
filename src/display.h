@@ -3,6 +3,7 @@
 
 #include "struct.h"
 #include "random.h"
+#include "manip.h"
 
 #include <stdio.h>
 #include <string.h>

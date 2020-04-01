@@ -8,16 +8,15 @@ typedef struct Attributs{
 	int Bonustab[7];
 
 	char *Sex;
-	char *Sexuality; 
-
+	int Sexuality; // define preference : undifined, Homo, Hetero, Bi, Pan, A (0 to 5) 
 }Attributs;
 
 typedef struct Competences{
+
 	int tabCompetence[8];
 }Competences;
 
-typedef struct lstPerks
-{
+typedef struct lstPerks{
 	char *namePerks;
 	int tabAttPerks[7];
 	int tabCompPerks[8];
@@ -47,8 +46,8 @@ typedef struct Characters{
 	int VitaliteMax;
 	int VitaliteAct;
 
-//	int ForceMax;
-//	int ForceAct;
+	int ForceMax;
+	int ForceAct;
 }Characters;
 
 #endif
